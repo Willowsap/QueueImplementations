@@ -85,7 +85,7 @@ public class ArrayQueue<T> implements Cloneable, Iterable<T>
      * @throws NoSuchElementException if there are no elements on the queue
      */
     @SuppressWarnings("unchecked")
-    public T peek()
+    public T examine()
     {
         if (isEmpty())
         {

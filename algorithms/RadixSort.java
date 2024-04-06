@@ -14,6 +14,11 @@ import storage.ArrayQueue;
 public class RadixSort
 {
     /**
+     * Don't make these!
+     */
+    private RadixSort() {}
+
+    /**
      * The number of possible digits. Uses base 10.
      */
     public static final int NUM_DIGITS = 10;
@@ -39,12 +44,12 @@ public class RadixSort
             buckets[i] = new ManualLinkedListQueue<Integer>();
         }
         int mostDigits = getMostDigits(data);
-        for (int i = 0, divideBy = 1; i < mostDigits; i++, divideBy *= 10)
+        for (int i = 0, place = 1; i < mostDigits; i++, place *= 10)
         {
             while (!result.isEmpty())
             {
                 int item = result.dequeue();
-                int digit = item / divideBy % 10;
+                int digit = item / place % 10;
                 buckets[digit].enqueue(item);
             }
             for (ManualLinkedListQueue<Integer> bucket : buckets)
