@@ -168,7 +168,7 @@ public class ManualLinkedListQueue<T> implements Cloneable, Iterable<T>
         for (Node i = front; i != null; i = i.getLink())
         {
             res = i.getData() + (i == front ? res : ", " + res);
-        }       
+        }
         return "<" + res;
     }
     
