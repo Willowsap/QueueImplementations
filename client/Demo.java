@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import algorithms.RadixSort;
+import storage.ArrayQueue;
 
 /**
  * Demo for playing with various queue structures.
@@ -22,6 +23,14 @@ public class Demo
     {
         // Play with the queue classes or sorts here.
         // Some methods that use the sorts are provided for you.
+
+        List<String> myList = new ArrayList<>();
+        myList.add("A");
+        myList.add("B");
+        myList.add("C");
+        myList.add("D");
+        ArrayQueue<String> myQueue = new ArrayQueue<>(myList);
+        System.out.println(myQueue);
     }
 
     /**

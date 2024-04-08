@@ -176,12 +176,16 @@ public class ArrayQueue<T> implements Cloneable, Iterable<T>
     @Override
     public String toString()
     {
-        String res = "<";
-        for (int i = data.length - 1; i >= 0; i--)
+        if (manyItems == 0)
         {
-            res += data[i] + ", ";
+            return "<>";
         }
-        return res.substring(0, res.length() - 2) + ">";
+        String res = "<";
+        for (int i = rear; i != front ; i = (i - 1 + data.length) % data.length)
+        {
+            res += data[i] += ", ";
+        }
+        return res + data[front] + ">";
     }
 
     @Override

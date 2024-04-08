@@ -6,7 +6,7 @@ import storage.ManualLinkedListQueue;
 import storage.ArrayQueue;
 
 /**
- * Three variations of radix sort.
+ * Two variations of radix sort.
  * 
  * @author Willow Sapphire
  * @version 04/05/2024
