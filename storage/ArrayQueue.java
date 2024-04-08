@@ -18,8 +18,8 @@ public class ArrayQueue<T> implements Cloneable, Iterable<T>
     public static final int DEFAULT_CAPACITY = 10;
 
     /**
-     * Items in the queue. The front of the queue is data[0].
-     * The back of the queue is data[manyItems - 1].
+     * Items in the queue. The front of the queue is data[front].
+     * The back of the queue is data[rear].
      */
     private Object[] data;
 
